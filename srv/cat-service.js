@@ -18,7 +18,6 @@ module.exports = (srv)=>{
 
         if (order.Items) {
 
-
             const affectedRows = await tx.run(order.Items.map(item =>
                     UPDATE(Books) .where({ID:item.book_ID})
                                   .and(`stock >= `, item.amount)
