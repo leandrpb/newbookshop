@@ -12,7 +12,9 @@ entity Magazines : Products {
     publisher : String(120);
 }
 
-entity Authors : managed, cuid {
+@cds.expose
+entity Authors : managed {
+    ID: Integer;
     name : String(111);
     books: Association to many Books on books.author = $self;
 }

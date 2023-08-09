@@ -14,5 +14,16 @@
   },
   "scripts": {
     "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "model": ["db/", "srv/", "app/"],
+        "credentials": {
+          "database": "db.sqlite"
+        }
+      }
+    }
   }
 }

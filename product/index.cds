@@ -1,7 +1,8 @@
 namespace sap.capfire.products;
 using { Currency, managed, cuid } from '@sap/cds/common';
 
-entity Products : managed, cuid {
+entity Products : managed {
+    key ID: Integer;
     title : localized String(111);
     descr : localized String (1111);
     stock : Integer;
