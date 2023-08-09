@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "sqlite - bookshop",
+            "database": "${workspaceFolder:newbookshop}/db.sqlite"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
