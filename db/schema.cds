@@ -12,7 +12,7 @@ entity Magazines : Products {
     publisher : String(120);
 }
 
-@cds.expose
+@cds.autoexpose
 entity Authors : managed {
     ID: Integer;
     name : String(111);
