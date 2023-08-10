@@ -2,8 +2,9 @@
 POST http://localhost:4004/browse/Orders
 Content-Type: application/json
 
-{ "OrderNo":"2019-15...", "Items":[
-    { "book_ID":1, "amount":5 }
+{ "OrderNo":"2023-09...", "Items":[
+    { "book_ID":1, "amount":5 },
+    { "book_ID":2, "amount":30 }
 ]}
 
 # Sending this three times should result in a 409: 5 exceeds stock for book #201
