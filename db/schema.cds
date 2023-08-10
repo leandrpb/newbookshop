@@ -22,12 +22,15 @@ entity Authors : managed {
 entity Orders : managed, cuid {
     OrderNo : String @title : 'Order Number';
     Items: Composition of many OrderItems on Items.parent = $self;
+    total: Decimal(9, 2) @readonly;
+    currency: Currency;
 }
 
 entity OrderItems : cuid {
     parent : Association to Orders;
     book : Association to Books;
     amount : Integer;
+    netValue: Decimal(9, 2);
 }
 
 entity Movies : additionalInfo, cuid {
