@@ -9,7 +9,7 @@ module.exports = cds.service.impl( srv => {
     async function _calculateTotals (orders, req) {
 
         const ordersByID = Array.isArray(orders)
-        ? orders.reduce((all,o) => { (all[o, ID] = o).total = 0; return all}, {})
+        ? orders.reduce ((all,o) => { (all[o.ID] = o).total=0; return all },{})
         : { [orders.ID]: orders }
 
         return cds.transaction(req) .run (

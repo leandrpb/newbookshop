@@ -1,0 +1,5 @@
+### Get Authors
+GET http://localhost:4004/admin/Orders
+
+### Get Authors
+GET http://localhost:4004/browse/Orders
