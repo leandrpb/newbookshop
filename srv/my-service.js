@@ -39,6 +39,10 @@ module.exports = (srv)=>{
         //req.error('Boo');
         console.debug('Error');
     })
+
+    srv.before('READ', 'Books', (req) => {
+        console.debug('Reading Books!');
+    })
 }
 
 /** Reduce stock of ordered books if available stock suffices */

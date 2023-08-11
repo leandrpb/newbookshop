@@ -10,7 +10,8 @@ Content-Type: application/json
 # Sending this three times should result in a 409: 5 exceeds stock for book #201
 
 ### Check books entity that stock was reduced
-GET http://localhost:4004/browse/Books
+GET http://localhost:4004/browse/Books?
+&expande=currency
 ### Get Book from brows
 GET http://localhost:4004/browse/Books?$expand=author
 
